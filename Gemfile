@@ -1,36 +1,39 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.6'
+gem 'rails', '~> 4.2', '>= 4.2.6'
+gem 'bootstrap-sass', '3.3.6'
+gem 'bcrypt', '~> 3.1', '>= 3.1.11'
+gem 'faker', '~> 1.6', '>= 1.6.3'
+gem 'will_paginate', '~> 3.1'
+gem 'bootstrap-will_paginate', '~> 0.0.10'
 
-gem 'jquery-rails'
-
-gem 'turbolinks'
-
-gem 'jbuilder', '~> 2.0'
-
-gem 'sdoc', '~> 0.4.0', group: :doc
-
-group :development, :test do
-  gem 'sqlite3'
-  gem 'rspec-rails', '2.9.0'
-  gem 'byebug'
+group :development do
+gem 'sqlite3', '~> 1.3', '>= 1.3.11'
+gem 'annotate', '~> 2.7', '>= 2.7.1'
 end
 
-group :assets do
-  gem 'sass-rails', '~> 5.0'
-  gem 'coffee-rails', '~> 4.1.0'
-  gem 'uglifier', '>= 1.3.0'
+group :assests do
+  gem 'sass-rails', '~> 5.0', '>= 5.0.4'
+  gem 'coffee-rails', '~> 4.1', '>= 4.1.1'
+  gem 'uglifier', '~> 3.0'
+end
+
+gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
+
+group :test, :development do
+  gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
+  gem 'guard-rspec', '~> 4.6', '>= 4.6.5'
+  gem 'guard-spork', '~> 2.1'
+  gem 'spork', '~> 0.9.2'
 end
 
 group :test do
-  gem 'capybara', '1.1.2'
+  gem 'capybara', '~> 2.7', '>= 2.7.1'
+  gem 'factory_girl_rails', '~> 4.7'
+  gem 'cucumber-rails', '~> 1.4', '>= 1.4.3'
+  gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
 end
 
 group :production do
-  gem 'pg', '0.12.2'
-end
-
-group :development do
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
+  gem 'pg', '~> 0.18.4'
 end
