@@ -30,7 +30,7 @@ end
 group :test do
   gem 'capybara', '~> 2.7', '>= 2.7.1'
   gem 'factory_girl_rails', '~> 4.7'
-  gem 'cucumber-rails', '~> 1.4', '>= 1.4.3'
+  gem 'cucumber-rails', '~> 1.4', '>= 1.4.3', :require => false
   gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
 end
 
